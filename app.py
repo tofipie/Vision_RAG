@@ -147,7 +147,7 @@ Question: {question}""", PIL.Image.open(img_path)]
 st.title("Vision-RAG - Cohere Embed v4 🤝 Gemini Flash by Google")
 
 st.sidebar.title("App Description")
-st.sidebar(""" State-of-the-art text & image retrieval model """)
+st.sidebar("State-of-the-art text & image retrieval model")
 
 with st.sidebar:
    # st.write('anthropic.claude-3-sonnet-20240229-v1:0 amazon.titan-embed-text-v1')
