@@ -137,7 +137,7 @@ Question: {question}""", PIL.Image.open(img_path)]
     )
 
     answer = response.text
-    print("LLM Answer:", answer)
+    return(answer)
 
 
 
