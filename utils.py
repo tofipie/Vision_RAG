@@ -1,3 +1,4 @@
+import os
 def get_data_files():
     data_files = []
     for dirname, _, filenames in os.walk("images"):
