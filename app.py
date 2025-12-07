@@ -150,9 +150,9 @@ st.sidebar.title("App Description")
 with st.sidebar:
    # st.write('anthropic.claude-3-sonnet-20240229-v1:0 amazon.titan-embed-text-v1')
    # st.button('New Chat', on_click=reset_conversation)
-   # st.write("files in DB:")
-    #for file in get_data_files():
-     #   st.markdown("- " + file)
+    st.write("images in DB:")
+    for img in get_data_files():
+        st.markdown("- " + img)
     st.write('Made by Noa Cohen')
 
 
