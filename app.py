@@ -116,12 +116,8 @@ def search(question, max_img_size=800):
     # Get the most relevant image
     top_idx = np.argmax(cos_sim_scores)
     max_score = cos_sim_scores[top_idx]
-    print("Most relevant image:", hit_img_path,max_score)
-    # Show the images
-    print("Question:", question)
-
+  #  print("Most relevant image:", hit_img_path,max_score)
     hit_img_path = img_paths[top_idx]
-
   
     return hit_img_path
 
@@ -162,12 +158,12 @@ prompt = st.text_input("ask a question")
 
 # If the user hits enter
 if prompt:
-   top_image_path = search(question)
+   top_image_path = search(prompt)
 
 # Use the image to answer the query
    st.subheader("Generated response:")
 
-   st.write(answer(question, top_image_path))
+   st.write(answer(prompt, top_image_path))
    image = PIL.Image.open(hit_img_path)
    max_size = (max_img_size, max_img_size)  # Adjust the size as needed
    image.thumbnail(max_size)
