@@ -147,10 +147,9 @@ Question: {question}""", PIL.Image.open(img_path)]
 st.title("Vision-RAG - Cohere Embed v4 🤝 Gemini Flash by Google")
 
 st.sidebar.title("App Description")
-st.sidebar("State-of-the-art text & image retrieval model")
 
 with st.sidebar:
-   # st.write('anthropic.claude-3-sonnet-20240229-v1:0 amazon.titan-embed-text-v1')
+    st.write("State-of-the-art text & image retrieval model")
     st.button('New Chat', on_click=reset_conversation)
     st.write("images in DB:")
     for img in get_data_files():
