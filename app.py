@@ -9,6 +9,8 @@ import PIL
 import tqdm
 import time
 import numpy as np
+from utils import get_data_files
+
 
 import cohere #Retrieval
 cohere_api_key = st.secrets["COHERE_API_KEY"]
