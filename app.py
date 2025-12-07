@@ -164,7 +164,7 @@ if prompt:
    st.subheader("Generated response:")
 
    st.write(answer(prompt, top_image_path))
-   image = PIL.Image.open(hit_img_path)
+   image = PIL.Image.open(top_image_path)
    max_size = (max_img_size, max_img_size)  # Adjust the size as needed
    image.thumbnail(max_size)
 
