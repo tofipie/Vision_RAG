@@ -2,14 +2,13 @@ import os
 import streamlit as st
 from google import genai
 import requests
-import os
 import io
 import base64
 import PIL
 import tqdm
 import time
 import numpy as np
-from utils import get_data_files
+from utils import get_data_files,reset_conversation
 
 
 import cohere #Retrieval
@@ -148,6 +147,8 @@ Question: {question}""", PIL.Image.open(img_path)]
 st.title("Vision-RAG - Cohere Embed v4 🤝 Gemini Flash")
 
 st.sidebar.title("App Description")
+with st.sidebar:
+    st.button('New Chat', on_click=reset_conversation)
 
 with st.sidebar:
    # st.write('anthropic.claude-3-sonnet-20240229-v1:0 amazon.titan-embed-text-v1')
@@ -156,6 +157,7 @@ with st.sidebar:
     for img in get_data_files():
         st.markdown("- " + img)
     st.write('Made by Noa Cohen')
+    
 
 
 prompt = st.text_input("ask a question")
