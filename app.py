@@ -16,7 +16,7 @@ import cohere #Retrieval
 cohere_api_key = st.secrets["COHERE_API_KEY"]
 co = cohere.ClientV2(api_key=cohere_api_key)
 
-gemini_api_key = userdata.get("GEMINI_API_KEY")  #LLM
+gemini_api_key = st.secrets["GEMINI_API_KEY"] #vision LLM
 client = genai.Client(api_key=gemini_api_key)
 
 
