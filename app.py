@@ -99,7 +99,8 @@ doc_embeddings = np.vstack(doc_embeddings)
 
 
 # Search allows us to find relevant images for a given question using Cohere Embed v4
-def search(question, max_img_size=800):
+max_img_size=800
+def search(question):
     # Compute the embedding for the query
     api_response = co.embed(
         model="embed-v4.0",
